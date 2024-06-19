@@ -9,10 +9,10 @@ def contador(nombre_archivo):
         for caracter in contenido:
             # Verificar si el caracter es una letra
             if caracter.isalpha():
-                contador_letras += 1  # Incrementar contador de letras
+                contador_letras += 1  
             # Verificar si el caracter es un espacio en blanco
             elif caracter.isspace():
-                contador_espacios += 1  # Incrementar contador de espacios
+                contador_espacios += 1  
     # Retornar la cantidad de letras y la cantidad de espacios contados
     return contador_letras, contador_espacios
 # Nombre del archivo a procesar
