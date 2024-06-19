@@ -1,5 +1,4 @@
 def contador(nombre_archivo):
-    # Inicializar contadores de letras y espacios
     contador_letras = 0
     contador_espacios = 0
     # Abrir el archivo en modo lectura
