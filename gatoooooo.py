@@ -1,13 +1,11 @@
 import random
 
 def imprimir_tablero(tablero):
-    """Imprime el tablero del juego"""
     for fila in tablero:
         print(" | ".join(fila))
         print("-" * 5)
 
 def verificar_ganador(tablero, jugador):
-    """Verifica si el jugador actual ha ganado"""
     # Verificar filas y columnas
     for i in range(3):
         if all(tablero[i][j] == jugador for j in range(3)) or all(tablero[j][i] == jugador for j in range(3)):
@@ -20,12 +18,10 @@ def verificar_ganador(tablero, jugador):
     return False
 
 def tablero_lleno(tablero):
-    """Verifica si el tablero está lleno"""
     return all(celda != ' ' for fila in tablero for celda in fila)
 
 def principal():
-    """Función principal del juego"""
-    nombre_usuario = input("Por favor, ingresa tu nombre de usuario: ")
+    nombre_usuario = input("Bienvenido al juego gato!!!!, ingresa tu nombre de usuario por favor: ")
 
     while True:
         print("MENÚ:")
@@ -45,7 +41,6 @@ def principal():
             print("Opción no válida. Por favor, elige nuevamente.")
 
 def jugar(modo, nombre_usuario):
-    """Función que maneja la lógica del juego según el modo seleccionado"""
     tablero = [[' ']*3 for _ in range(3)]
     jugadores = ['X', 'O']
     turno = 0
@@ -82,7 +77,6 @@ def jugar(modo, nombre_usuario):
         turno = (turno + 1) % 2
 
 def movimiento_ia(tablero):
-    """Función que determina el movimiento de la IA seleccionando una celda vacía al azar"""
     celdas_vacias = [(i, j) for i in range(3) for j in range(3) if tablero[i][j] == ' ']
     return random.choice(celdas_vacias)
 
